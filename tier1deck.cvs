@@ -1,0 +1,21 @@
+color,value,cost
+Color.GREEN,1,{Color.BLUE:2, Color.RED:1}
+Color.WHITE,0,{Color.BLACK:1, Color.GREEN:2}
+Color.BLUE,2,{Color.WHITE:3, Color.RED:1}
+Color.RED,1,{Color.GREEN:2, Color.BLACK:1}
+Color.BLACK,0,{Color.BLUE:1, Color.RED:1, Color.WHITE:2}
+Color.GREEN,0,{Color.WHITE:2, Color.BLUE:1}
+Color.WHITE,1,{Color.RED:3}
+Color.BLUE,1,{Color.BLACK:2, Color.GREEN:2}
+Color.BLACK,2,{Color.WHITE:4}
+Color.RED,0,{Color.GREEN:1, Color.BLACK:2, Color.BLUE:1}
+Color.GREEN,0,{Color.RED:2, Color.WHITE:2}
+Color.WHITE,2,{Color.BLACK:3, Color.GREEN:1}
+Color.BLUE,0,{Color.RED:1, Color.WHITE:1, Color.BLACK:1}
+Color.RED,1,{Color.GREEN:1, Color.BLUE:1, Color.WHITE:1}
+Color.BLACK,1,{Color.GREEN:2, Color.RED:2}
+Color.GREEN,2,{Color.BLUE:3, Color.BLACK:1}
+Color.WHITE,0,{Color.RED:2, Color.BLUE:1, Color.BLACK:1}
+Color.BLUE,1,{Color.GREEN:1, Color.RED:2}
+Color.BLACK,0,{Color.WHITE:2, Color.RED:1}
+Color.RED,2,{Color.GREEN:3, Color.BLUE:1}
