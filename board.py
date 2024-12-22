@@ -20,7 +20,7 @@ class Board:
     def draw_visible_card(self, tier: int, index: int) -> cards.Card:
         if tier >= len(self.visible_cards) or index >= len(self.visible_cards[tier]):
             raise IndexError(f"Tier {tier} or index {index} out of range.")
-        return self.visible_cards[tier][index]  # There is no check if the player can afford the card here, as one can also reserve a card without paying.
+        return self.visible_cards[tier].pop(index)
 
     def can_draw_tokens(self, requested_tokens: dict[cards.Color, int]) -> bool:
         """
@@ -47,12 +47,11 @@ class Board:
         else:
             return False
 
-    def draw_tokens(self, requested_tokens: dict[cards.Color, int]) -> dict[cards.Color, int]:
+    def decrease_token_amount(self, requested_tokens: dict[cards.Color, int]):
         for color, count in requested_tokens.items():
             self.available_tokens[color] -= count
-        return requested_tokens
 
-    def return_tokens(self, player_tokens: dict[cards.Color, int]):
+    def increase_token_amount(self, player_tokens: dict[cards.Color, int]):
         for color, count in player_tokens.items():
             self.available_tokens[color] += count
 
