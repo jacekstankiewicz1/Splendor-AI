@@ -2,7 +2,7 @@ import cards
 
 class Board:
     def __init__(self):
-        self.all_decks = [cards.Deck("tier1deck.cvs"),cards.Deck("tier2deck.cvs"),cards.Deck("tier3deck.cvs")]
+        self.all_decks = [cards.Deck("tier1deck.json"), cards.Deck("tier2deck.json"), cards.Deck("tier3deck.json")]
         self.visible_cards = [[],[],[]]
         self.available_tokens = {
             cards.Color.GREEN: 6,

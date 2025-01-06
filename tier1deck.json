@@ -1,0 +1,165 @@
+[
+  {
+    "color": "Color.GREEN",
+    "value": 1,
+    "cost": {
+      "Color.BLUE": 2,
+      "Color.RED": 1
+    }
+  },
+  {
+    "color": "Color.WHITE",
+    "value": 0,
+    "cost": {
+      "Color.BLACK": 1,
+      "Color.GREEN": 2
+    }
+  },
+  {
+    "color": "Color.BLUE",
+    "value": 2,
+    "cost": {
+      "Color.WHITE": 3,
+      "Color.RED": 1
+    }
+  },
+  {
+    "color": "Color.RED",
+    "value": 1,
+    "cost": {
+      "Color.GREEN": 2,
+      "Color.BLACK": 1
+    }
+  },
+  {
+    "color": "Color.BLACK",
+    "value": 0,
+    "cost": {
+      "Color.BLUE": 1,
+      "Color.RED": 1,
+      "Color.WHITE": 2
+    }
+  },
+  {
+    "color": "Color.GREEN",
+    "value": 0,
+    "cost": {
+      "Color.WHITE": 2,
+      "Color.BLUE": 1
+    }
+  },
+  {
+    "color": "Color.WHITE",
+    "value": 1,
+    "cost": {
+      "Color.RED": 3
+    }
+  },
+  {
+    "color": "Color.BLUE",
+    "value": 1,
+    "cost": {
+      "Color.BLACK": 2,
+      "Color.GREEN": 2
+    }
+  },
+  {
+    "color": "Color.BLACK",
+    "value": 2,
+    "cost": {
+      "Color.WHITE": 4
+    }
+  },
+  {
+    "color": "Color.RED",
+    "value": 0,
+    "cost": {
+      "Color.GREEN": 1,
+      "Color.BLACK": 2,
+      "Color.BLUE": 1
+    }
+  },
+  {
+    "color": "Color.GREEN",
+    "value": 0,
+    "cost": {
+      "Color.RED": 2,
+      "Color.WHITE": 2
+    }
+  },
+  {
+    "color": "Color.WHITE",
+    "value": 2,
+    "cost": {
+      "Color.BLACK": 3,
+      "Color.GREEN": 1
+    }
+  },
+  {
+    "color": "Color.BLUE",
+    "value": 0,
+    "cost": {
+      "Color.RED": 1,
+      "Color.WHITE": 1,
+      "Color.BLACK": 1
+    }
+  },
+  {
+    "color": "Color.RED",
+    "value": 1,
+    "cost": {
+      "Color.GREEN": 1,
+      "Color.BLUE": 1,
+      "Color.WHITE": 1
+    }
+  },
+  {
+    "color": "Color.BLACK",
+    "value": 1,
+    "cost": {
+      "Color.GREEN": 2,
+      "Color.RED": 2
+    }
+  },
+  {
+    "color": "Color.GREEN",
+    "value": 2,
+    "cost": {
+      "Color.BLUE": 3,
+      "Color.BLACK": 1
+    }
+  },
+  {
+    "color": "Color.WHITE",
+    "value": 0,
+    "cost": {
+      "Color.RED": 2,
+      "Color.BLUE": 1,
+      "Color.BLACK": 1
+    }
+  },
+  {
+    "color": "Color.BLUE",
+    "value": 1,
+    "cost": {
+      "Color.GREEN": 1,
+      "Color.RED": 2
+    }
+  },
+  {
+    "color": "Color.BLACK",
+    "value": 0,
+    "cost": {
+      "Color.WHITE": 2,
+      "Color.RED": 1
+    }
+  },
+  {
+    "color": "Color.RED",
+    "value": 2,
+    "cost": {
+      "Color.GREEN": 3,
+      "Color.BLUE": 1
+    }
+  }
+]
