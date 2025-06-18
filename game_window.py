@@ -23,7 +23,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(711, 854)
+        MainWindow.resize(711, 909)
         sizePolicy = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -332,7 +332,19 @@ class Ui_MainWindow(object):
         self.buttonLayout.addWidget(self.pushButton_3)
 
 
-        self.gridLayout.addLayout(self.buttonLayout, 1, 5, 3, 1)
+        self.gridLayout.addLayout(self.buttonLayout, 2, 5, 2, 1)
+
+        self.infoLayout = QGridLayout()
+        self.infoLayout.setObjectName(u"infoLayout")
+        self.label = QLabel(self.centralwidget)
+        self.label.setObjectName(u"label")
+        sizePolicy.setHeightForWidth(self.label.sizePolicy().hasHeightForWidth())
+        self.label.setSizePolicy(sizePolicy)
+
+        self.infoLayout.addWidget(self.label, 0, 0, 1, 1, Qt.AlignHCenter)
+
+
+        self.gridLayout.addLayout(self.infoLayout, 1, 5, 1, 1)
 
         self.nobleLayout = QVBoxLayout()
         self.nobleLayout.setObjectName(u"nobleLayout")
@@ -411,6 +423,7 @@ class Ui_MainWindow(object):
         self.pushButton_6.setText(QCoreApplication.translate("MainWindow", u"Buy Reserved Card", None))
         self.pushButton_7.setText(QCoreApplication.translate("MainWindow", u"Swap Token", None))
         self.pushButton_3.setText(QCoreApplication.translate("MainWindow", u"Buy Noble", None))
+        self.label.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.label_21.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.label_20.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.label_22.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))

@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QMainWindow, QApplication, QGraphicsView, QLabel, QGraphicsDropShadowEffect, QWidget, QListWidgetItem
+from PySide6.QtWidgets import QMainWindow, QApplication, QGraphicsView, QLabel, QGraphicsDropShadowEffect, QWidget, QListWidgetItem, QVBoxLayout
 from PySide6.QtGui import QPainter, QColor, QFont
 from game_window import Ui_MainWindow
 from game import Game
@@ -6,6 +6,7 @@ from PySide6.QtCore import Qt
 from cards import Color
 from card_widget import Ui_CardWidget
 from cards import Card
+from token_widget import Ui_tokenWidget
 
 
 
@@ -46,6 +47,14 @@ class MainWindow(QMainWindow):
         self.update_players(game)
         self.update_nobles(game)
 
+    def render_token(self, color : Color, cost : int)->QWidget:
+        token_widget = QWidget()
+        ui = Ui_tokenWidget()
+        ui.setupUi(token_widget)
+        ui.tokenCircle.setStyleSheet(f"background-color: {color.name.lower()}; border-radius: 100px;")
+        ui.tokenNumber.setText(str(cost))
+        return token_widget
+
     def render_card(self, card : Card) -> QWidget:
         card_widget = QWidget()
         ui = Ui_CardWidget()
@@ -55,30 +64,14 @@ class MainWindow(QMainWindow):
 
         card_widget.setStyleSheet(general_stylesheet)
 
-        ui.label.setStyleSheet(specific_stylesheet)
-        ui.listWidget.setStyleSheet(specific_stylesheet)
+        ui.cardValue.setStyleSheet(specific_stylesheet)
 
-        ui.label.setText(str(card.value))
+        ui.cardValue.setText(str(card.value))
 
-        ui.listWidget.clear()
+        ui.verticalLayout_3 = QVBoxLayout(ui.tokenContainer)
         for color, cost in card.cost.items():
-            # Create a QLabel for each cost
-            cost_label = QLabel()
-            cost_label.setFixedSize(30, 30)
-            cost_label.setAlignment(Qt.AlignCenter)
-            cost_label.setText(str(cost))
-            cost_label.setStyleSheet(f"""
-                background-color: {color.name.lower()};
-                color: white;
-                border: 1px solid black;
-                border-radius: 15px;
-                font-weight: bold;
-            """)
-            # Add the QLabel as a QListWidgetItem
-            item = QListWidgetItem()
-            item.setSizeHint(cost_label.size())
-            ui.listWidget.addItem(item)
-            ui.listWidget.setItemWidget(item, cost_label)
+            token_widget = self.render_token(color, cost)
+            ui.verticalLayout_3.addWidget(token_widget)
 
         return card_widget
 
@@ -165,6 +158,7 @@ class MainWindow(QMainWindow):
 
     def update_nobles(self, game: Game):
         board = game.board
+
 
 
 if __name__ == "__main__":
